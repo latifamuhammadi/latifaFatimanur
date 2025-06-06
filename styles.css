@@ -1,0 +1,343 @@
+/* Resetting default browser styling */
+body, html {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    pad: 20px;
+    margin: 20px;
+    margin-top: 60px;
+    text-align: center; /* Centers the header content */
+   
+  }
+  
+  /* Logo Styling */
+  .logo {
+    font-size: 2rem; 
+    font-family: 'Arial', sans-serif; /* Set the font-family */
+    font-style: italic;
+    color: gold;
+    padding: -10px 0; /* Adds space around the logo */
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin-top: -80px;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    list-style: none;
+    padding: 20px;
+    gap: 15px;
+    margin:0;
+    display: flex;
+    justify-content: center; /* Centers the navbar items */
+  }
+  
+  .navbar li {
+    
+    margin: 20px 15px; /* Space between each link */
+  }
+  
+  .navbar li a {
+    text-decoration: none; /* Removes default underline */
+    color: white; /* Text color */
+    font-size: 1rem;
+    padding: 10px 0;
+    position: relative; /* Needed for the underline */
+  }
+  
+  /* Hover and Active States */
+  .navbar li a:hover,
+  .navbar li a:focus {
+    color: maroon; /* Change color on hover */
+  }
+  
+  /* Underline effect on hover or click */
+  .navbar li a::after {
+    content: ''; /* Creates an empty pseudo-element */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: transparent; /* No underline by default */
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .navbar li a:hover::after,
+  .navbar li a:focus::after {
+    background-color: maroon; /* Blue underline on hover or focus */
+  }
+  
+  /* Responsive Navbar */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+    }
+    .navbar li {
+      margin: 10px 0; /* Space between navbar items for small screens */
+    }
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Creates a responsive grid */
+    gap: 20px; /* Space between each card */
+    padding: 20px; /* Padding around the grid */
+  }
+  
+  /* Styling each product card */
+  .product-card {
+    border: 1px solid black;
+    ; /* Light border around each card */
+    
+    text-align: center; /* Centers the content inside the card */
+    background-color: black;
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .product-card img {
+    width: 300px; /* Makes image fill the card */
+    height: 300px;
+    border-bottom: 1px solid #ddd;
+    border-radius: 15px;
+     /* Space below the image */
+  }
+  
+  .product-card h3 {
+    font-size: 18px;
+    margin: 5px 0;
+    color: white;
+  }
+  
+  .product-card p {
+    font-size: 16px;
+    color: beige;
+  }
+  
+  .product-card .btn {
+    text-decoration: none;
+    color: #fff;
+   
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+  }
+  a{
+    text-decoration: none;
+    color: white;
+  }
+  
+  .btn a:hover,
+  .btn a:focus {
+    color: white; /* Change color on hover */
+    transition: background-color 0.3s ease;
+    text-decoration: underline;
+  }
+  .product-card{
+    
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effect for the product cards */
+  .product-card:hover {
+    transform: translateY(-5px); /* Moves the card up slightly */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  }
+  /* Flex container */
+.flex-container {
+    display: flex;          /* Activate flexbox */
+    justify-content: space-between; /* Space between image and text */
+    align-items: center;    /* Vertically align the items in the center */
+    width: 1000px;           /* Set fixed width */
+    margin: 20px 200px;         /* Center the container on the page */
+  }
+  
+  /* Image styling */
+  .image {
+    width: 40%;             /* Image will take up 50% of the container's width */
+    height: 500px; 
+    border-radius:20px ;          /* Maintain aspect ratio */
+  }
+  
+  /* Text styling */
+  .text {
+    flex: 1;    
+    width: 400px;            /* The text will take up the remaining space */
+    padding-left: 25px;     /* Add space between the image and text */
+    font-size: 16px;        /* Adjust text size as needed */
+    color: gray; 
+    
+
+             /* Set text color */
+  }
+  .collection{
+    color: gray;
+    padding-left: 20px;
+    margin-bottom: -20px;
+
+  }
+  .vintage{
+    color: gray;
+    padding-left: 20px;
+    padding-top: -5px;
+  }
+  /*Maxi Css*/
+  /* Hamburger menu styling (hidden by default) */
+.hamburger-menu {
+    display: none;
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .hamburger-menu {
+      display: block;
+    }
+  
+    /* Toggle visibility for nav links when hamburger is clicked */
+    .nav-links.active {
+      display: block;
+      position: absolute;
+      top: 70px;
+      right: 0;
+      background-color: #fff;
+      width: 200px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+  
+    .nav-links {
+      display: none;
+      list-style-type: none;
+      padding: 0;
+    }
+  
+    .nav-links li {
+      text-align: center;
+      margin: 10px 0;
+    }
+  
+    .nav-links li a {
+      color: #333;
+      font-size: 18px;
+    }
+  
+    .nav-links li a:hover {
+      color: #007bff;
+    }
+  }
+  /*slideshow*/
+  .slideshow-container{
+    width: 1350px;
+    height: 100%;
+  }
+  .slides img{
+    min-width: 1350px;
+    height: 100%;
+  }
+  .slides a.overlay-text {
+    position: absolute; /* Positions the text over the image */
+    top: 120%; /* Vertically centers the text */
+    left: 20%; /* Horizontally centers the text */
+    transform: translate(-50%, -50%); /* Adjusts for the offset caused by centering */
+    color: white; /* Makes the text visible over the image */
+    /* Adds a translucent background to the text */
+    padding: 10px 20px; /* Adds spacing around the text */
+    font-size: 4em; /* Adjust text size as needed */
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center; /* Centers text if it spans multiple lines */
+    border-radius: 5px; /* Adds rounded corners to the text background */
+  }
+  .slides a.overlay-text:hover{
+    text-decoration-line: underline;
+    color: #ddd;
+  }
+  
+  /* end of maxi css*/
+  /*photo section*/
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    margin-top: 0px;
+  }
+  
+  .item {
+    position: relative;
+    text-align: center;
+  }
+  
+  .item img {
+    width: 330px;
+    height: 450px;
+    display: block;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .item .hover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .item:hover .default-img {
+    opacity: 0;
+  }
+  
+  .item:hover .hover-img {
+    opacity: 1;
+  }
+  
+  .product-info {
+    margin-top: 12px;
+    font-size: 16px;
+    color: white;
+  }
+  .color-options {
+    display: flex;
+    justify-content: left;
+    gap: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  
+  .color-swatch {
+    width: 12px;
+    height: 12px;
+    border-radius: 0%;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    position: relative;
+  }
+  
+  .color-swatch:hover {
+    transform: scale(1.2);
+    border-color: #000; /* Highlight the border on hover */
+  }
+  
+  .color-swatch[title]:hover:after {
+    content: attr(title);
+    position: absolute;
+    background: #000;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    z-index: 10;
+  }
+  
+  
+  
+  
